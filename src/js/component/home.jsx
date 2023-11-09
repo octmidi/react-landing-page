@@ -1,27 +1,26 @@
 import React from "react";
+import JumbotronC from "./jumbotron.jsx";
+import CardC from "./card.jsx";
 
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+    return (
+        <div>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <JumbotronC />
+                </div>
+            </div>
+            <div className="container">
+                <div className="row justify-content-center text-center">
+                    <div className="col-xl-3 col-md-6 col-12 mb-4 mx-auto"><CardC /></div>
+                    <div className="col-xl-3 col-md-6 col-12 mb-4 mx-auto"><CardC /></div>
+                    <div className="col-xl-3 col-md-6 col-12 mb-4 mx-auto"><CardC /></div>
+                    <div className="col-xl-3 col-md-6 col-12 mb-4 mx-auto"><CardC /></div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Home;
